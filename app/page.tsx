@@ -14,7 +14,7 @@ export default function Home() {
     if (value === '') {
       setActive('idle');
     }
-    if (value.length > 3) {
+    if (value.length > 6) {
       setDisabled(false);
     } else {
       setDisabled(true);
@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="grid place-items-center min-h-svh bg-gray-100">
-      <div className="sm:max-w-[400px] h-full sm:h-[800px] p-8 bg-white rounded-3xl">
+      <div className="sm:max-w-[400px] h-full sm:h-[800px] p-8 bg-white rounded-3xl shadow">
         <AppNavigation />
 
         <h1 className="text-2xl font-bold mb-2">Set Password</h1>
@@ -64,7 +64,7 @@ export default function Home() {
 
           <button
             disabled={disabled}
-            type="submit"
+            type="button"
             className="rounded-full w-full h-12 bg-sky-400 text-white font-semibold disabled:opacity-50 transition-opacity"
           >
             Continue
